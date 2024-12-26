@@ -19,20 +19,10 @@
             left: 10px;
             width: 120px;
         }
-        .container {
-            text-align: center;
-            padding: 20px;
-        }
-        .search-bar {
-            margin: 20px auto;
-            padding: 10px;
-            width: 50%;
-            font-size: 16px;
-            border: none;
-            border-radius: 5px;
-        }
         .all-items {
-            margin-top: 20px;
+            position: absolute;
+            top: 20px;
+            right: 20px;
             padding: 10px 20px;
             font-size: 18px;
             background-color: #4caf50;
@@ -43,14 +33,45 @@
         .all-items:hover {
             background-color: #45a049;
         }
+        .search-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+        .search-bar {
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            width: 300px;
+            margin-bottom: 10px;
+        }
+        .search-button {
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #4caf50;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            color: white;
+        }
+        .search-button:hover {
+            background-color: #45a049;
+        }
     </style>
 </head>
 <body>
     <img src="logo.png" alt="PCS Infragold Logo" class="logo">
-    <div class="container">
-        <h1>Welcome to PCS Infragold</h1>
+    <button class="all-items" onclick="viewAllItems()">All Items</button>
+    <div class="search-container">
         <input type="text" class="search-bar" placeholder="Enter Category Code">
-        <button class="all-items" onclick="viewAllItems()">All Items</button>
+        <button class="search-button">Search</button>
     </div>
     <script>
         function viewAllItems() {
