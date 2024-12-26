@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: url('background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+        }
+        .logo {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 120px;
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+        }
+        .search-bar {
+            margin: 20px auto;
+            padding: 10px;
+            width: 50%;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+        }
+        .all-items {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #4caf50;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .all-items:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <img src="logo.png" alt="PCS Infragold Logo" class="logo">
+    <div class="container">
+        <h1>Welcome to PCS Infragold</h1>
+        <input type="text" class="search-bar" placeholder="Enter Category Code">
+        <button class="all-items" onclick="viewAllItems()">All Items</button>
+    </div>
+    <script>
+        function viewAllItems() {
+            window.location.href = 'all-items.html';
+        }
+    </script>
+</body>
+</html>
