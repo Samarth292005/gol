@@ -70,12 +70,21 @@
     <img src="logo.png" alt="PCS Infragold Logo" class="logo">
     <button class="all-items" onclick="viewAllItems()">All Items</button>
     <div class="search-container">
-        <input type="text" class="search-bar" placeholder="Enter Category Code">
-        <button class="search-button">Search</button>
+        <input id="categoryCode" type="text" class="search-bar" placeholder="Enter Category Code">
+        <button class="search-button" onclick="searchProduct()">Search</button>
     </div>
     <script>
         function viewAllItems() {
             window.location.href = 'all-items.html';
+        }
+
+        function searchProduct() {
+            const categoryCode = document.getElementById('categoryCode').value;
+            if (categoryCode) {
+                window.location.href = `product-details.html?category=${encodeURIComponent(categoryCode)}`;
+            } else {
+                alert('Please enter a category code');
+            }
         }
     </script>
 </body>
